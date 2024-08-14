@@ -1,3 +1,4 @@
+import 'package:first_app/widgets/container_propaganda.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -17,29 +18,31 @@ class Dashboard extends StatelessWidget {
               height: 95,
             ),
           ),
-       const   Row(
+          const Row(
             children: [
               Icon(Icons.location_on),
               Text("Cotia, São Paulo"),
             ],
           ),
-      const    Padding(
-            padding:  EdgeInsets.all(32.0),
+          const Padding(
+            padding: EdgeInsets.all(32.0),
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Pesquisar na loja',
                 prefixIcon: Icon(Icons.search),
-                fillColor:  Color.fromARGB(255, 245, 244, 244), // Para preencher precisa ativar!
+                fillColor: Color.fromARGB(
+                    255, 245, 244, 244), // Para preencher precisa ativar!
                 filled: true,
               ),
             ),
           ),
-          Text("Card propaganda"),
+          ContainerPropaganda(),
           Text("oFERTAS"),
           Text("Cards de frutas "),
           Text("Mais vendidos"),
           Text("Cards de frutas "),
+          ContainerPropaganda(),
         ],
       ),
     );
