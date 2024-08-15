@@ -1,3 +1,4 @@
+import 'package:first_app/widgets/card_produto.dart';
 import 'package:first_app/widgets/container_propaganda.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class Dashboard extends StatelessWidget {
           Center(
             child: Image.asset(
               "assets/images/logo.png",
-              height: 95,
+              height: 65,
             ),
           ),
           const Row(
@@ -39,10 +40,15 @@ class Dashboard extends StatelessWidget {
           ),
           ContainerPropaganda(),
           Text("oFERTAS"),
-          Text("Cards de frutas "),
+          const Row(
+            children: [
+              CardProduto(),
+              CardProduto(),
+              CardProduto(),
+            ],
+          ),
           Text("Mais vendidos"),
           Text("Cards de frutas "),
-          ContainerPropaganda(),
         ],
       ),
     );

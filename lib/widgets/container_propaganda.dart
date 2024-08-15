@@ -8,7 +8,7 @@ class ContainerPropaganda extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 150,
       margin: const EdgeInsets.all(16),
       width: double.infinity,
       decoration: BoxDecoration(
