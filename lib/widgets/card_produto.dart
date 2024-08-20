@@ -1,3 +1,4 @@
+import 'package:first_app/constants/styles.dart';
 import 'package:flutter/material.dart';
 
 class CardProduto extends StatelessWidget {
@@ -13,7 +14,7 @@ class CardProduto extends StatelessWidget {
           border: Border.all(
             color: const Color.fromARGB(255, 206, 203, 203),
           ),
-          borderRadius: BorderRadius.circular(15)),
+          borderRadius: borderRadius),
       child: Column(
         children: [
           const SizedBox(
@@ -53,8 +54,9 @@ class CardProduto extends StatelessWidget {
                   height: 40,
                   //  margin: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 61, 184, 98),
-                      borderRadius: BorderRadius.circular(15)),
+                    color: const Color.fromARGB(255, 61, 184, 98),
+                    borderRadius: borderRadius,
+                  ),
                   child: IconButton(
                     iconSize: 20,
                     padding: EdgeInsets.zero,

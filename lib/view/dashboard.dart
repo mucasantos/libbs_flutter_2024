@@ -1,3 +1,4 @@
+import 'package:first_app/constants/styles.dart';
 import 'package:first_app/widgets/card_produto.dart';
 import 'package:first_app/widgets/container_propaganda.dart';
 import 'package:flutter/material.dart';
@@ -20,29 +21,23 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(Icons.location_on),
               Text("Cotia, São Paulo"),
             ],
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.all(32.0),
             child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Pesquisar na loja',
-                prefixIcon: Icon(Icons.search),
-                fillColor: Color.fromARGB(
-                    255, 245, 244, 244), // Para preencher precisa ativar!
-                filled: true,
-              ),
+              decoration: textFieldDecoration,
             ),
           ),
           ContainerPropaganda(),
           Text("oFERTAS"),
           const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              CardProduto(),
               CardProduto(),
               CardProduto(),
             ],
