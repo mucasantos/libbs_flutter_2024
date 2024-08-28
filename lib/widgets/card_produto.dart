@@ -13,7 +13,7 @@ class CardProduto extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 150,
-      height: 250,
+      //height: 180,
       margin: const EdgeInsets.all(6.0),
       decoration: BoxDecoration(
           border: Border.all(
@@ -21,18 +21,18 @@ class CardProduto extends StatelessWidget {
           ),
           borderRadius: borderRadius),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const SizedBox(
-            height: 10,
+            height: 20,
           ),
-          Expanded(
-            child: Image.network(
-              produto.imagem,
-              fit: BoxFit.contain,
-            ),
+          Image.asset(
+            produto.imagem,
+            height: 80,
+            fit: BoxFit.fill,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 6),
             child: Text(
               produto.titulo,
               style: TextStyle(

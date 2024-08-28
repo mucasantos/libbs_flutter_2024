@@ -1,3 +1,4 @@
+import 'package:first_app/constants/images_assets.dart';
 import 'package:first_app/constants/styles.dart';
 import 'package:first_app/models/produto_model.dart';
 import 'package:first_app/widgets/card_produto.dart';
@@ -9,11 +10,10 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ProdutoModel produto = ProdutoModel(
-        imagem:
-            "https://images.pexels.com/photos/5966630/pexels-photo-5966630.jpeg",
-        titulo: "Banana verde",
-        preco: 6.99);
+    ProdutoModel produto =
+        ProdutoModel(imagem: AppImages.apple, titulo: "Maça", preco: 6.99);
+    ProdutoModel produto2 = ProdutoModel(
+        imagem: AppImages.refri1, titulo: "Refrigerante", preco: 6.99);
     return Scaffold(
       appBar: AppBar(
         title: Text('Minha dasboard'),
@@ -22,7 +22,7 @@ class Dashboard extends StatelessWidget {
         children: [
           Center(
             child: Image.asset(
-              "assets/images/logo.png",
+              AppImages.logoCarrot,
               height: 65,
             ),
           ),
@@ -48,7 +48,7 @@ class Dashboard extends StatelessWidget {
                 produto: produto,
               ),
               CardProduto(
-                produto: produto,
+                produto: produto2,
               ),
             ],
           ),

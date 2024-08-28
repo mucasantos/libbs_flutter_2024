@@ -1,3 +1,4 @@
+import 'package:first_app/constants/images_assets.dart';
 import 'package:first_app/models/compras_model.dart';
 import 'package:first_app/widgets/card_compras.dart';
 import 'package:flutter/material.dart';
@@ -8,11 +9,35 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ComprasModel minhaCompra = ComprasModel(
-      imagem: "assets/images/frutas.png",
+      imagem: AppImages.apple,
       medida: "1Kg",
       preco: 7.99,
       quantidade: 12,
-      titulo: "Feijão preto",
+      titulo: "Maça",
+    );
+
+    ComprasModel minhaCompra2 = ComprasModel(
+      imagem: AppImages.banana,
+      medida: "1Kg",
+      preco: 7.99,
+      quantidade: 12,
+      titulo: "Banana",
+    );
+
+    ComprasModel minhaCompra3 = ComprasModel(
+      imagem: AppImages.refri1,
+      medida: "Lata",
+      preco: 7.99,
+      quantidade: 12,
+      titulo: "Refrigerante",
+    );
+
+    ComprasModel minhaCompra4 = ComprasModel(
+      imagem: AppImages.galinha,
+      medida: "1Kg",
+      preco: 7.99,
+      quantidade: 12,
+      titulo: "Frango",
     );
 
     return Scaffold(
@@ -39,6 +64,15 @@ class CartScreen extends StatelessWidget {
               children: [
                 CardCompras(
                   compra: minhaCompra,
+                ),
+                CardCompras(
+                  compra: minhaCompra2,
+                ),
+                CardCompras(
+                  compra: minhaCompra3,
+                ),
+                CardCompras(
+                  compra: minhaCompra4,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 30),

@@ -1,3 +1,4 @@
+import 'package:first_app/constants/images_assets.dart';
 import 'package:flutter/material.dart';
 
 class ContainerPropaganda extends StatelessWidget {
@@ -13,10 +14,10 @@ class ContainerPropaganda extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
-        image: const DecorationImage(
-          fit: BoxFit.cover,
+        image: DecorationImage(
+          fit: BoxFit.fill,
           image: AssetImage(
-            'assets/images/image-card.jpg',
+            AppImages.banner,
           ),
         ),
       ),
@@ -26,7 +27,7 @@ class ContainerPropaganda extends StatelessWidget {
             bottom: 10,
             right: 20,
             child: Text(
-              "Ofertas sensacionais!",
+              "",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 26,
