@@ -1,11 +1,20 @@
+import 'package:first_app/models/compras_model.dart';
 import 'package:first_app/widgets/card_compras.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {
-  const CartScreen({super.key});
+  CartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    ComprasModel minhaCompra = ComprasModel(
+      imagem: "assets/images/frutas.png",
+      medida: "1Kg",
+      preco: 7.99,
+      quantidade: 12,
+      titulo: "Feijão preto",
+    );
+
     return Scaffold(
       appBar: AppBar(
           toolbarHeight: 60,
@@ -16,7 +25,7 @@ class CartScreen extends StatelessWidget {
           )),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 32, bottom: 32),
+          padding: EdgeInsets.only(top: 32, bottom: 32),
           child: Container(
             //height: double.infinity,
             decoration: BoxDecoration(
@@ -28,10 +37,9 @@ class CartScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Cards(),
-                Cards(),
-                Cards(),
-                Cards(),
+                CardCompras(
+                  compra: minhaCompra,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(top: 30),
                   child: Container(

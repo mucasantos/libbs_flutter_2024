@@ -1,8 +1,12 @@
+import 'package:first_app/models/compras_model.dart';
 import 'package:flutter/material.dart';
 
-class Cards extends StatelessWidget {
-  const Cards({
+class CardCompras extends StatelessWidget {
+  final ComprasModel compra;
+
+  const CardCompras({
     super.key,
+    required this.compra,
   });
 
   @override
@@ -22,7 +26,7 @@ class Cards extends StatelessWidget {
               Column(
                 children: [
                   Image.asset(
-                    "assets/images/frutas.png",
+                    compra.imagem, //String - imagem
                     width: 100,
                     height: 100,
                   ),
@@ -34,12 +38,12 @@ class Cards extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Cesta de Frutas",
+                        compra.titulo, //String -titulo
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        "1kg, Price",
+                        compra.medida, //medida - String
                         style: TextStyle(
                             color: Color.fromARGB(255, 165, 161, 161)),
                       ),
@@ -69,7 +73,7 @@ class Cards extends StatelessWidget {
                             child: Padding(
                           padding: const EdgeInsets.only(left: 15, right: 15),
                           child: Text(
-                            "1",
+                            compra.quantidade.toString(), //qtd int
                             style: TextStyle(fontSize: 18),
                           ),
                         )),
@@ -108,7 +112,7 @@ class Cards extends StatelessWidget {
                   Container(
                     margin: new EdgeInsets.symmetric(vertical: 20.0),
                     child: Text(
-                      'R\$5.99',
+                      'R\$${compra.preco}', //valor double - interpolation
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
