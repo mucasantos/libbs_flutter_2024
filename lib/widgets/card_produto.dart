@@ -1,8 +1,13 @@
 import 'package:first_app/constants/styles.dart';
+import 'package:first_app/models/produto_model.dart';
 import 'package:flutter/material.dart';
 
 class CardProduto extends StatelessWidget {
-  const CardProduto({super.key});
+  final ProdutoModel produto;
+  const CardProduto({
+    super.key,
+    required this.produto,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +27,14 @@ class CardProduto extends StatelessWidget {
           ),
           Expanded(
             child: Image.network(
-              'https://images.pexels.com/photos/5966630/pexels-photo-5966630.jpeg',
+              produto.imagem,
               fit: BoxFit.contain,
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.0),
             child: Text(
-              'Organic Bananas',
+              produto.titulo,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 12,
@@ -42,8 +47,8 @@ class CardProduto extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  "R\$4.77",
+                Text(
+                  produto.preco.toString(),
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14,

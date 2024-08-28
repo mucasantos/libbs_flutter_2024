@@ -1,4 +1,5 @@
 import 'package:first_app/constants/styles.dart';
+import 'package:first_app/models/produto_model.dart';
 import 'package:first_app/widgets/card_produto.dart';
 import 'package:first_app/widgets/container_propaganda.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,11 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ProdutoModel produto = ProdutoModel(
+        imagem:
+            "https://images.pexels.com/photos/5966630/pexels-photo-5966630.jpeg",
+        titulo: "Banana verde",
+        preco: 6.99);
     return Scaffold(
       appBar: AppBar(
         title: Text('Minha dasboard'),
@@ -35,11 +41,15 @@ class Dashboard extends StatelessWidget {
           ),
           ContainerPropaganda(),
           Text("oFERTAS"),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              CardProduto(),
-              CardProduto(),
+              CardProduto(
+                produto: produto,
+              ),
+              CardProduto(
+                produto: produto,
+              ),
             ],
           ),
           Text("Mais vendidos"),
