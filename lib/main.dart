@@ -1,6 +1,7 @@
 import 'package:first_app/view/cart_screen.dart';
 import 'package:first_app/view/categories_screen.dart';
 import 'package:first_app/view/dashboard_screen.dart';
+import 'package:first_app/view/estudo_func.dart';
 
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: CartScreen(),
+      home: EstudoFuncScreen(),
     );
   }
 }
