@@ -12,7 +12,7 @@ class CardProduto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
+//width: 150,
       //height: 180,
       margin: const EdgeInsets.all(6.0),
       decoration: BoxDecoration(
@@ -24,7 +24,7 @@ class CardProduto extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const SizedBox(
-            height: 20,
+            height: 10,
           ),
           Image.asset(
             produto.imagem,
@@ -32,7 +32,10 @@ class CardProduto extends StatelessWidget {
             fit: BoxFit.fill,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 6),
+            padding: EdgeInsets.symmetric(
+              horizontal: 8.0,
+              vertical: 6,
+            ),
             child: Text(
               produto.titulo,
               style: TextStyle(

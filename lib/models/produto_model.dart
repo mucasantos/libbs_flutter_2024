@@ -1,7 +1,6 @@
 class ProdutoModel {
   final String imagem;
   final String titulo;
-
   final double preco;
 
   ProdutoModel({

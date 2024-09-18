@@ -1,3 +1,8 @@
+/*
+Organizar melhor o projeto e evitar erros 
+de digitao ao acessar assets;
+*/
+
 class AppImages {
   static String banana = "assets/images/banana.png";
   static String apple = "assets/images/apple.png";
