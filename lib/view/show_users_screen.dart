@@ -13,10 +13,23 @@ class ShowUsersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            Text(users[0].name),
-          ],
+        appBar: AppBar(),
+        body: SingleChildScrollView(
+          child: Column(
+              children: users
+                  .map((user) => Container(
+                        width: double.infinity,
+                        color: Colors.blueGrey,
+                        margin: EdgeInsets.all(8),
+                        child: Column(
+                          children: [
+                            Text(user.name),
+                            Text(user.idade.toString()),
+                            Text(user.anoNascimento().toString()),
+                          ],
+                        ),
+                      ))
+                  .toList()),
         ),
       ),
     );
