@@ -1,7 +1,7 @@
 import 'package:first_app/constants/images_assets.dart';
 import 'package:first_app/constants/styles.dart';
 import 'package:first_app/mock/produtos_fake_db.dart';
-
+import 'package:first_app/view/produto_detalhe_screen.dart';
 import 'package:first_app/widgets/card_produto.dart';
 import 'package:first_app/widgets/container_propaganda.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +47,18 @@ class Dashboard extends StatelessWidget {
                   childAspectRatio: 0.8,
                 ),
                 itemBuilder: (context, index) {
-                  return CardProduto(produto: appProducts[index]);
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => ProdutoDetalheScreen(
+                            produto: appProducts[index],
+                          ),
+                        ),
+                      );
+                    },
+                    child: CardProduto(produto: appProducts[index]),
+                  );
                 },
               ),
               Text("Mais vendidos"),

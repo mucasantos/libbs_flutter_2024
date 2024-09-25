@@ -17,3 +17,5 @@ OutlineInputBorder inputBorder = OutlineInputBorder(
 );
 
 BorderRadius borderRadius = BorderRadius.circular(16);
+
+const Color greenApp = Color.fromARGB(255, 83, 180, 112);
